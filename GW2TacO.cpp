@@ -34,7 +34,12 @@
 #define MINIZ_HEADER_FILE_ONLY
 #include "Bedrock/UtilLib/miniz.c"
 
+#ifdef _WIN64
+#pragma comment(lib,"ThirdParty/BugSplat/lib/BugSplat64.lib")
+#else
 #pragma comment(lib,"ThirdParty/BugSplat/lib/BugSplat.lib")
+#endif
+
 #pragma comment(lib,"Dwmapi.lib")
 #pragma comment(lib,"Imm32.lib")
 
